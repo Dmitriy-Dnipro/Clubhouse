@@ -1,0 +1,87 @@
+#docs {
+    padding: 71px 0 136px;
+    margin-top: -98px;
+    background : {
+        position: bottom left;
+        repeat: no-repeat;
+        size: contain;
+        image: url('../images/docs/docsGradientBackground.png');
+    }
+    @include respond-up-to(sm) {
+        margin-top: 0;
+        padding: 0 0 25px;
+    }
+    @include respond-exact(md) {
+        padding: 0 0 225px;
+    }
+    h2 {
+        margin-bottom: 40px;
+        @include respond-exact(md) {
+            margin-bottom: 25px;
+        }
+    }
+    .sliderDocs {
+        margin: auto 75px;
+        padding: 50px 0;
+        @include respond-up-to(sm) {
+            margin: 0 auto;
+            padding: 0;
+        }
+        @include respond-exact(md) {
+            margin: 0 auto;
+        }
+        .swiper-slide {
+            margin-top: auto;
+            margin-bottom: auto;
+            border-radius: 0;
+            display: flex;
+            background: $white;
+            height: 305px;
+            padding: 26px 67px;
+            background-color: #E6E7E9;
+            border-radius: 5px;
+            @include respond-up-to(sm) {
+                height: auto;
+                padding: 0;
+                display: block;
+            }
+            @include respond-exact(md) {
+                height: 208px;
+            }
+            img {
+                margin: auto;
+            }
+        }
+        .swiper-slide-active {
+            height: 375px;
+            background: $white;
+            padding: 33px 45px;
+            background-color: $white;
+            box-shadow: 16px 15px 60px rgba(50, 50, 71, 0.3);
+            @include respond-up-to(sm) {
+                height: auto;
+                padding: 0;
+                box-shadow: none;
+            }
+            @include respond-exact(md) {
+                height: 340px;
+                padding: 29px 41px;
+            }
+        }
+        .swiper-navigation {
+            @include respond-up-to(sm) {
+                margin-top: 45px;
+                margin-left: 10px;
+                margin-bottom: 35px;
+            }
+        }
+    }
+    .dotted {
+        bottom: 0;
+        right: 60px;
+        z-index: 2;
+        @include respond-up-to(sm) {
+            display: none;
+        }
+    }
+}

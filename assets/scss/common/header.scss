@@ -1,0 +1,97 @@
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2;
+    padding-top: 45px;
+
+    @include respond-up-to(sm){
+        padding-top: 21px;
+    }
+
+    .logo {
+        @include respond-up-to(sm) {
+            max-width: 96px;
+        }
+    }
+
+    #navigation {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        list-style: none;
+        line-height: 1em;
+        li {
+            margin-left: 30px;
+            line-height: 1em;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child { 
+                margin-right: 30px;
+            }
+            a{
+                background: $white;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                font-size: 16px;
+                line-height: 1.0em;
+                &:hover {
+                    background: linear-gradient(187.27deg, #FAFF00 10.74%, #FF9A00 85.72%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;  
+                }
+            }
+        }
+    }
+
+    .flexWrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+        margin-top: 2px;
+        // a {
+        //     @include respond-up-to(sm) {
+        //         margin-left: 30px;
+        //         display: block;
+
+        //         line-height: 1em;
+
+        //         width: 17px;
+        //         height: 16px;
+        //     }
+
+        //     &:first-of-type {
+        //         margin-left: 0;
+        //     }
+        //     &:nth-child(-n+3) {
+        //         @include respond-to(sm) {
+        //             display: none;
+        //         }
+        //     }
+        // }
+        .phoneNumber {
+            font-weight: bold;
+            font-size: 14px;
+            letter-spacing: 0.3em;
+    
+            background: $white;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            @include respond-up-to(sm) {
+                font-size: 13px;
+                //display: none;
+            }
+            &:hover {
+                background: linear-gradient(187.27deg, #FAFF00 10.74%, #FF9A00 85.72%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+        .burgerMenu {
+            margin-left: 15px;
+        }
+    }
+}

@@ -1,0 +1,105 @@
+.webp {
+    #aboutComplex {
+        background-image: url('../images/aboutComplex/aboutComplexBackground.webp'), url('../images/aboutComplex/aboutComplexGradient.png');
+        @include respond-up-to(md) {
+            background-image: none;
+        }
+    }
+    #advantages, #gallery {
+        background-image: url('../images/advantages/advantagesBackground.webp'), url('../images/advantages/advantagesGradientBackground.webp');
+        @include respond-up-to(sm) {
+            background-image: url('../images/advantages/advantagesBackgroundMobile.webp'), url('../images/advantages/advantagesGradientBackgroundMobile.webp');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/advantages/advantagesBackgroundIpad.webp'), url('../images/advantages/advantagesGradientBackgroundIpad.webp');
+        }
+    }
+    #contacts {
+        background-image: url('../images/contacts/contactsBackground.webp');
+        @include respond-up-to(sm){
+            background-image: url('../images/contacts/contactsBackgrounMobile.webp');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/contacts/contactsBackgrounIpad.webp');
+        }
+    }
+    #infrastructure  {
+        background-image: url('../images/infrastructure/infrastructureBackground.webp');
+        @include respond-up-to(sm) {
+            background-image: url('../images/infrastructure/infrastructureBackgroundMobile.webp');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/infrastructure/infrastructureBackgroundIpad.webp');
+        }
+    }
+    #intro {
+        background-image: url('../images/intro/introBackgroundBig.webp'), url('../images/intro/introGradient.png');
+        @include respond-up-to(sm) {
+            background-image: url('../images/intro/introBackgroundMobile.webp'), url('../images/intro/introGradientMobile.png');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/intro/introBackgroundIpad.webp'), url('../images/intro/introGradient.png');
+        }
+    }
+    #progress {
+        .swiper-slide {
+            background-image: url('../images/common/blackBackground.webp');
+        }
+    }
+    #mobileMenu {
+        background-image: url('../images/common/mobileMenuBackground.webp');
+    }
+}
+
+.no-webp {
+    #aboutComplex {
+        background-image: url('../images/aboutComplex/aboutComplexBackground.png'), url('../images/aboutComplex/aboutComplexGradient.png');
+        @include respond-up-to(md) {
+            background-image: none;
+        }
+    }
+    #advantages, #gallery {
+        background-image: url('../images/advantages/advantagesBackground.png'), url('../images/advantages/advantagesGradientBackground.png');
+        @include respond-up-to(sm) {
+            background-image: url('../images/advantages/advantagesBackgroundMobile.png'), url('../images/advantages/advantagesGradientBackgroundMobile.png');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/advantages/advantagesBackgroundIpad.png'), url('../images/advantages/advantagesGradientBackgroundIpad.png');
+        }
+    }
+    #contacts {
+        background-image: url('../images/contacts/contactsBackground.png');
+        @include respond-up-to(sm){
+            background-image: url('../images/contacts/contactsBackgrounMobile.png');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/contacts/contactsBackgrounIpad.png');
+        }
+    }
+    #infrastructure  {
+        background-image: url('../images/infrastructure/infrastructureBackground.png');
+        @include respond-up-to(sm) {
+            background-image: url('../images/infrastructure/infrastructureBackgroundMobile.png');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/infrastructure/infrastructureBackgroundIpad.png');
+        }
+    }
+    #intro {
+        background-image: url('../images/intro/introBackgroundBig.png'), url('../images/intro/introGradient.png');
+        @include respond-up-to(sm) {
+            background-image: url('../images/intro/introBackgroundMobile.png'), url('../images/intro/introGradientMobile.png');
+        }
+        @include respond-exact(md) {
+            background-image: url('../images/intro/introBackgroundIpad.png'), url('../images/intro/introGradient.png');
+        }
+    }
+    #progress {
+        .swiper-slide {
+            background-image: url('../images/common/blackBackground.jpg');
+        }
+    }
+    #mobileMenu {
+        background-image: url('../images/common/mobileMenuBackground.jpg');
+    }
+}

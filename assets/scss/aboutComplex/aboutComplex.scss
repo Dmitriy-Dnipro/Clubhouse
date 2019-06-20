@@ -1,0 +1,146 @@
+#aboutComplex {
+    background : {
+        repeat: no-repeat, no-repeat;
+        size: auto, contain;
+        position: top right, bottom left;
+    }
+    @include respond-up-to(sm) {
+        padding-bottom: 83px;
+        //margin-top: -213px;
+        margin-top: 0;
+    }
+    @include respond-exact(md) {
+        margin-top: -40px;
+        padding-bottom: 155px;
+    }
+    padding-bottom: 218px;
+    h2 {
+        margin-bottom: 55px;
+        @include respond-up-to(sm) {
+            margin-bottom: 25px;
+        }
+        @include respond-exact(md) {
+            margin-bottom: 10px;
+        }
+    }
+    .complexImage {
+        @include respond-up-to(sm) {
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            max-width: unset;
+            margin-bottom: 25px;
+        }
+        @include respond-exact(md) {
+            margin-bottom: 10px;
+        }
+    }
+    p{
+        &:first-of-type {
+            color: $black3;
+            font-size: 29px;
+            margin-bottom: 7px;
+            @include respond-up-to(sm) {
+                margin-bottom: 13px;
+                font-size: 24px; 
+            }
+        }
+        &:last-of-type {
+            color: $black4f;
+            margin-bottom: 6px;
+            @include respond-up-to(sm) {
+                font-size: 16px;
+                margin-bottom: 12px;
+            }
+            @include respond-exact(md) {
+                max-width: 410px;
+            }
+        }
+    }
+    a {
+        font-size: 14px;
+        letter-spacing: 0.01em;
+        color: $black3;
+        border-bottom: 1px solid $dark-grey;
+        font-weight: bold;
+        margin-bottom: 57px;
+        display: inline-block;
+        cursor: pointer;
+        @include respond-up-to(sm) {
+            margin-bottom: 20px;
+        }
+        @include respond-exact(md) {
+            margin-bottom: 45px;
+        }
+    }
+    .blackBlock {
+        background-color: $black2b;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 25px 30px;
+        max-width: 744px;
+        margin-left: 40px;
+        @include respond-up-to(sm) {
+            width: calc(100% + 30px);
+            margin-left: -15px;
+            max-width: unset;
+
+            flex-direction: column;
+            padding: 25px;
+        }
+        @include respond-exact(md) {
+            width: 100%;
+            margin-left: 0;
+            padding: 36px 19px
+        }
+        &Half {
+            max-width: 321px;
+            @include respond-up-to(sm) {
+                width: 100%;
+                max-width: none;
+                &:first-child {
+                    margin-bottom: 11px;
+                }
+            }
+            p {
+                color: $white;
+                font-size: 16px;
+                font-weight: 300;
+                margin-bottom: 0;
+                text-align: justify;
+                @include respond-up-to(sm) {
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .dotted {
+        &:first-of-type {
+            top: 459px;
+            right: -20px;
+            @include respond-up-to(sm) {
+                top: auto;
+                bottom: 47.5px;
+                right: auto;
+                left: -31px;
+                z-index: -1;
+            }
+            @include respond-exact(md) {
+                top: auto;
+                bottom: 0;
+                left: auto;
+                right: 15px;
+            }
+        }
+        &:nth-of-type(2) {
+            visibility: hidden;
+            @include respond-up-to(sm) {
+                visibility: visible;
+                top: auto;
+                bottom: 0;
+                right: 23px;
+                z-index: 2;
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+#ready {
+    padding-bottom: 200px;
+    margin-top: -60px;
+    @include respond-up-to(sm) {
+        padding-bottom: 60px;
+        margin-top: 0;
+    }
+    @include respond-exact(md) {
+        margin-top: 0;
+    }
+    h2 {
+        margin-bottom: 70px;
+        @include respond-up-to(sm) {
+            margin-bottom: 40px;
+        }
+        @include respond-exact(md) {
+            margin-bottom: 58px;
+        }
+    }
+    .imageWrapper {
+        display: flex;
+        position: relative;
+        &Left {
+            justify-content: flex-end;
+            .absoluteImage {
+                top: 30px;
+                left: -10px;
+                width: 303px;
+                height: 275px;
+                @include respond-exact(md) {
+                    width: 207px;
+                    height: 180px;
+                }
+            }
+        }
+        &Center {
+            justify-content: center;
+            .absoluteImage {
+                top:0;
+                left:0;
+                width: 100%;
+                height: 333px;
+                @include respond-up-to(sm) {
+                    height: 305px;
+                }
+                @include respond-exact(md) {
+                    height: 218px;
+                }
+            }
+        }
+        &Right {
+            justify-content: flex-start;
+            .absoluteImage {
+                top: 30px;
+                right: -10px;
+                width: 303px;
+                height: 275px;
+                @include respond-exact(md) {
+                    width: 207px;
+                    height: 180px;
+                }
+            }
+            
+        }
+        .absoluteImage {
+            position: absolute;
+            z-index: -1;
+        }
+        &Content {
+            padding-top: 105px;
+            margin-top: auto;
+            //max-width: 291px;
+            text-align: center;
+            @include respond-exact(md) {
+                padding-top: 60px;
+            }
+            &:hover {
+                img {
+                    transition: 0.5s ease-out all;
+                    box-shadow: 0 0 28px rgba(50, 50, 71, 0.45), 0 0 60px rgba(50, 50, 71, 0.3);
+                }
+            }
+            img {
+                margin-bottom: 51px;
+                transition: 0.5s ease-in all;
+                @include respond-exact(md) {
+                    margin-bottom: 24px;
+                }
+            }
+            a {
+                font-size: 20px;
+                transition: 0.5s ease-in all;
+                span {
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    font-size: inherit;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    transition: 0.5s ease-out all;
+                }
+            }
+        }
+    }
+
+    .dotted {
+        &:first-of-type {
+            top: 145px;
+            left: -96px;
+            @include respond-up-to(md) {
+                display: none;
+            }
+        }
+        &:last-of-type {
+            bottom: 0;
+            right: 325px;
+            @include respond-up-to(md) {
+                display: none;
+            }
+        }
+    }
+
+    .rowWrap {
+        @include respond-up-to(sm) {
+            overflow: scroll;
+            .row {
+                width: 700px;
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+#intro {
+    min-height: 862px;
+    background : {
+        repeat: no-repeat, no-repeat;
+        size: 100% 100%, contain;
+        position: top left, right bottom;
+    }
+    // @media only screen and (max-width: 320px) {
+    //     background-size: 100% 528px, contain !important;
+    //     max-height: 528px !important;
+    // }
+    @include respond-up-to(sm) {
+        background : {
+            size: 100% 568px, contain;
+            position: top left, right bottom;
+        }
+        min-height: auto;
+        max-height: 568px;
+        padding-bottom: 477px;
+        margin-bottom: 60px;
+    }
+    @include respond-exact(md) {
+        min-height: 1137px;
+        background : {
+        size: contain, contain;
+        }
+    }
+    h1 {
+        padding-top: 427px;
+        font-weight: bold;
+        font-size: 44px;
+        color: $white;
+        margin-bottom: 15px;
+        @media only screen and (max-width: 320px) {
+            //padding-top: 255px !important;
+            font-size: 28px !important;
+        }
+        @include respond-up-to(sm) {
+            padding-top: 212px;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+        @include respond-exact(md) {
+            padding-top: 450px;
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+    }
+    p {
+        color: $white;
+        font-size: 30px;
+        margin-bottom: 35px;
+        @media only screen and (max-width: 320px) {
+            font-size: 16px !important;
+        }
+        @include respond-up-to(sm) {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
+        @include respond-exact(md) {
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+    }
+    .dotted {
+        top: 533px;
+        right: -70px;
+        @include respond-up-to(sm) {
+           bottom: 220px;
+           left: 15px;
+           top: auto;
+           right: auto; 
+
+           display: none;
+        }
+        @include respond-exact(md) {
+            top: 655px;
+            right: 10px;
+        }
+    }
+    .socialNetworks {
+        position: absolute;
+        bottom: 200px;
+        right: 105px;
+        flex-direction: column;
+        @include respond-up-to(sm) {
+            bottom: 10px;
+            right: 8px;
+
+            display: none;
+        }
+        @include respond-exact(md) {
+            right: 15px;
+            bottom: 140px;
+        }
+        a{
+            &:first-child {
+                margin-bottom: 48px;
+                @include respond-up-to(sm) {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}

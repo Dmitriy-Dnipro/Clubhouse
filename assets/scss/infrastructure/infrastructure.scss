@@ -1,0 +1,198 @@
+#infrastructure {
+    background : {
+        position: top right;
+        repeat: no-repeat;
+        size: auto 862px;
+    }
+    padding: 53px 0 138px;
+    margin-top: -232px;
+    @include respond-up-to(sm) {
+        margin-top: -40px;
+        background : {
+            position: top left;
+            repeat: no-repeat;
+            size: 100% 614px;
+        }
+    }
+    @include respond-exact(md) {
+        padding: 70px 0 80px;
+        background : {
+            position: top left;
+            repeat: no-repeat;
+            size: contain;
+        }
+    }
+    h2 {
+        color: $white;
+        margin-bottom: 45px;
+        @include respond-up-to(sm) {
+            margin-bottom: 105px
+        }
+        @include respond-exact(md) {
+            margin-bottom: 226px;
+        }
+    }
+
+    #map {
+        width: 100%;
+        height: 563px;
+        margin-bottom: 15px;
+        @include respond-up-to(sm) {
+            height: 275px;
+            margin-bottom: 22px;
+        }
+        @include respond-exact(md) {
+            height: 355px;
+            margin-bottom: 30px;
+        }
+    }
+    .navigationWrapper {
+        @include respond-up-to(sm) {
+            overflow: scroll;
+            margin-bottom: 235px;
+        }
+    }
+    .navigation {
+        margin-bottom: 155px;
+        display: flex;
+        flex-flow: row wrap;
+        @include respond-up-to(sm) {
+            width: 710px;
+            margin-bottom: 0;
+        }
+        @include respond-exact(md) {
+            margin-bottom: 310px;
+        }
+        a {
+            display: flex;
+            background: $white;
+            width: 79px;
+            height: 79px;
+            margin-right: 20px;
+            cursor: pointer;
+            padding-top: 15px;
+
+            //border: 1px solid brown;
+            -webkit-appearance: initial;
+
+            flex-direction: column;
+
+            transition: 0.5s all;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include respond-up-to(md) {
+                width: 63px;
+                height: 63px;
+                margin-right: 15px;
+                padding-top: 10px;
+            }
+            
+            p {
+                font-size: 12px;
+                text-align: center;
+            }
+            
+            .svgWrapper {
+                //margin: auto;
+                margin : {
+                    right: auto;
+                    left: auto;
+                }
+                display: flex;
+                margin-bottom: 4px;
+                @include respond-up-to(md) {
+                    height: 32px !important;
+                }
+                svg {
+                    margin: auto;
+                    @include respond-up-to(md) {
+                        height: inherit;
+                    }
+                }
+            }
+            
+        }
+        #allbus {
+            padding-top: 0;
+            p {
+                margin: auto;
+                font-size: 21px;
+            }
+        }
+        .activeButton{
+            background: linear-gradient(243.52deg, #FAFF00 5.62%, #FF9A00 86.11%);
+            box-shadow: inset 5px 5px 10px rgba(51, 51, 51, 0.6);
+
+            transition: 0.5s all;
+        }
+    }
+
+    .formWrapper {
+        background: $black1a;
+        padding: 75px 130px;
+        text-align: center;
+        box-shadow: 16px 16px 35px rgba(50, 50, 71, 0.35);
+        @include respond-up-to(sm) {
+            padding: 50px 15px;
+        }
+        @include respond-exact(md) {
+            padding: 75px 125px;
+        }
+        p{
+            &:first-of-type {
+                color: $white;
+                font-size: 44px;
+                font-weight: bold;
+                @include respond-up-to(sm) {
+                    font-size: 30px;
+                    margin-bottom: 10px;
+                }
+            }
+            &:last-of-type {
+                font-size: 22px;
+                color: $greybd;
+                margin-bottom: 25px;
+                @include respond-up-to(sm) {
+                    font-size: 16px;
+                    margin-bottom: 38px;
+                }
+            }
+        }
+        form {
+            margin: 0 auto;
+            button {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    .dotted {
+        &:first-of-type {
+            top: 113px;
+            left: 60px;
+            @include respond-up-to(sm) {
+                top: 411px;
+                left: 103px;
+            }
+            @include respond-exact(md) {
+                top: 255px;
+                left: 40px;
+            }
+        }
+        &:last-of-type {
+            top: 416px;
+            right: 90px;
+            @include respond-up-to(sm) {
+                top: 33px;
+                right: 33px;
+            }
+            @include respond-exact(md) {
+                top: 689px;
+                right: 15px;
+            }
+        }
+    }
+}

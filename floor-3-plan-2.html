@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="author" content="">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon//site.webmanifest">
+	<link rel="mask-icon" href="favicon//safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+	 
+	<title>Title</title>
+
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"
+	integrity="sha512-07I2e+7D8p6he1SIM+1twR5TIrhUQn9+I6yjqD53JQjFiMf8EtC93ty0/5vJTZGF8aAocvHYNEDJajGdNx1IsQ=="
+	crossorigin=""/>
+ 	 
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css" />
+
+	
+	<link href="build/styles/style.min.css?v=0.006" rel="stylesheet">
+	 
+	<meta property="og:url" content="">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="build/common/og.jpg">
+	<meta property="og:description" content="">
+</head>
+<body>
+<header id="singleHeader">
+	<div class="container">
+		<div class="row">
+				<div class="col-4 col-lg-2">
+						<a href="http://clubhouse.dp.ua/">
+							<img src="build/images/common/logo.png" class="logo" alt="logo">
+						</a>
+				</div>
+			<div class="col-lg-7 hideTillHorizontalTablet">
+				<ul id="navigation">
+					<li>
+						<a class="navigatiinLink" href="//clubhouse.dp.ua/#aboutComplex">О комплексе</a>
+					</li>
+					<li>
+						<a class="navigatiinLink" href="//clubhouse.dp.ua/#plans">Планировки</a>
+					</li>
+					<li>
+						<a class="navigatiinLink" href="//clubhouse.dp.ua/#infrastructure">Инфраструктура</a>
+					</li>
+					<li>
+						<a class="navigatiinLink" href="//clubhouse.dp.ua/#gallery">Галерея</a>
+					</li>
+					<li>
+						<a class="navigatiinLink" href="//clubhouse.dp.ua/#contacts">Контакты</a>
+					</li>
+					<li>
+						<a class="navigatiinLink" href="https://novostroy111.wixsite.com/clubhouse" target="_blank">ОСББ</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-8 col-lg-2">
+				<div class="flexWrapper">
+					<a class="phoneNumber" href="tel:+380981558688">098 155 86 88</a>
+					<svg class="burgerMenu hideFromHorizontalTablet" width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect y="19" width="28" height="2" rx="1" fill="#F2F2F2"/>
+						<rect x="13" width="15" height="2" rx="1" fill="#F2F2F2"/>
+						<rect x="6" y="9" width="22" height="2" rx="1" fill="#F2F2F2"/>
+					</svg>	
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<section id="singlePlan">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<a class="back-button" onclick="history.back(-1)">Вернуться назад</a>
+				<div class="floorNumber">
+					<span>4</span> этаж
+				</div>
+				<h1>Квартира 119.8 м<sup>2</sup></h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-lg-6">
+				<div class="planWrapper">
+					<img src="build/images/singlePage/plan3/flat-2e.jpg?v=0.001" alt="floor1" class="planImage">
+					<img src="build/images/singlePage/plan3/flat-2.jpg?v=0.003" alt="floor1" class="planImage no-height">
+					<a class="turnImages">Возможный вариант планировки</a>
+					<button class="yellowButton" data-target="#modalFormSignPlan" data-toggle="modal">Узнать цену</button>
+				</div>
+			</div>
+			<div class="col-12 col-lg-6">
+				<div class="dataCenter">
+					<div class="dataCenterRow">
+						<p>Общая площадь</p>
+						<p>119.8 м<sup>2</sup></p>
+					</div>
+					<div class="dataCenterRow">
+						<p>Жилая площадь</p>
+						<p>114.9 м<sup>2</sup></p>
+					</div>
+				</div>
+				<div class="formWrapper">
+					<p>Заполните форму</p>
+					<p>и получите детальную планировку квартиры</p>
+					<form id="formGetPDF">
+						<div class="form-group">
+							<input type="text" class="form-control" name="name" placeholder="Имя">
+						</div>
+						<div class="form-group">
+							<input type="tel" class="form-control" name="tel" placeholder="Номер телефона">
+						</div>
+						<div class="form-group">
+							<input type="email" class="form-control" name="email" placeholder="E-mail">
+						</div>
+						<input name="hidden" type="hidden" value="Заявка на планировку 4 этаж; общая площадь 119.8, жилая 114.9">
+						<button id="getPDFSubmit" type="button" class="btn btn-primary yellowButton">Отправить</button>
+						<div class="pdf" >
+							<a class="download" href="detailed-plans.pdf"  download>Скачать планировку</a>
+						</div>
+					</form>
+					<div class="resultMessage" id="pdfResult"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<img src="build/images/common/points.png" class="dotted" alt="points">
+	<img src="build/images/common/points.png" class="dotted" alt="points">
+</section>
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-6 col-md-2 align">
+				<p>Club House 2019</p>
+			</div>
+			<div class="order-3 col-6 order-md-2 offset-md-1 col-md-3 col-lg-2 align">
+				<p>Все права защищены</p>
+			</div>
+			<div class="order-4 col-6 order-md-3 col-md-3 offset-lg-1 col-lg-2 align">
+				<div class="socialNetworks">
+					<a href="//www.facebook.com/clubhouse.dp/">
+						<svg class="facebook" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<linearGradient id="paint0_linear" x1="19.1158" y1="8.96" x2="3.65845" y2="16.6613" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FAFF00"/>
+								<stop offset="1" stop-color="#FF9A00"/>
+							</linearGradient>
+							<path d="M15.3 -0.00012207H0.7C0.3 -0.00012207 0 0.299878 0 0.699878V15.3999C0 15.6999 0.3 15.9999 0.7 15.9999H8V10.9999H6V7.99988H8V5.99988C8 3.89988 9.2 2.99988 11 2.99988C11.9 2.99988 12.8 2.99988 13 2.99988V5.99988H12C11.4 5.99988 11 6.39988 11 6.99988V7.99988H13.6L13 10.9999H11V15.9999H15.3C15.7 15.9999 16 15.6999 16 15.2999V0.699878C16 0.299878 15.7 -0.00012207 15.3 -0.00012207Z" fill="#2D3344"/>
+						</svg>
+					</a>
+					<a href="//www.instagram.com/clubhouse.dp/">
+						<svg class="instagram" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<linearGradient id="paint0_linear" x1="13.479" y1="4.00721" x2="11.6241" y2="4.93136" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FAFF00"/>
+								<stop offset="1" stop-color="#FF9A00"/>
+							</linearGradient>
+							<linearGradient id="paint1_linear" x1="13.5579" y1="8.48012" x2="5.82923" y2="12.3307" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FAFF00"/>
+								<stop offset="1" stop-color="#FF9A00"/>
+							</linearGradient>
+							<linearGradient id="paint2_linear" x1="19.1158" y1="8.95988" x2="3.65845" y2="16.6611" gradientUnits="userSpaceOnUse">
+								<stop stop-color="#FAFF00"/>
+								<stop offset="1" stop-color="#FF9A00"/>
+							</linearGradient>
+							<path d="M12.1451 4.85188C12.6753 4.85188 13.1051 4.42208 13.1051 3.89188C13.1051 3.36169 12.6753 2.93188 12.1451 2.93188C11.6149 2.93188 11.1851 3.36169 11.1851 3.89188C11.1851 4.42208 11.6149 4.85188 12.1451 4.85188Z" fill="#2D3344"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4 8C4 10.206 5.794 12 8 12C10.206 12 12 10.206 12 8C12 5.794 10.206 4 8 4C5.794 4 4 5.794 4 8ZM6 8C6 6.897 6.897 6 8 6C9.103 6 10 6.897 10 8C10 9.103 9.103 10 8 10C6.897 10 6 9.103 6 8Z" fill="#2D3344"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4 15.9998H12C14.056 15.9998 16 14.0558 16 11.9998V3.99976C16 1.94376 14.056 -0.000244141 12 -0.000244141H4C1.944 -0.000244141 0 1.94376 0 3.99976V11.9998C0 14.0558 1.944 15.9998 4 15.9998ZM2 3.99976C2 3.06476 3.065 1.99976 4 1.99976H12C12.935 1.99976 14 3.06476 14 3.99976V11.9998C14 12.9348 12.935 13.9998 12 13.9998H4C3.047 13.9998 2 12.9528 2 11.9998V3.99976Z" fill="#2D3344"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+			<div class="order-2 col-6  order-md-4 col-md-3 lg-offset-1 col-lg-3 align flex-element">
+				<p class="copyright">
+					Разработка сайта: 
+				</p>
+				<a href="//ideadigital.agency/" target="_blank"></a>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade modalForm" id="modalFormSignPlan">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button class="close-button close" type="button" data-dismiss="modal" aria-hidden="true">
+					<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 2L20 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+						<path d="M20 2L2 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+					</svg>			
+				</button>
+				<p>Оставьте контакты</p>
+				<p>Получите детальную информацию о стоимости</p>
+				<form id="signForm" action="main-form.php" onSubmit="return checkSignFormSubmit()" method="post" target="_blank">
+					<div class="form-group">
+						<input type="text" class="form-control" name="name" placeholder="Имя">
+					</div>
+					<div class="form-group">
+						<input type="tel" class="form-control" name="tel" placeholder="Номер телефона">
+					</div>
+					<input name="hidden" type="hidden" value="Узнать цену на планировку 4 этаж; общая площадь 119.8, жилая 114.9">
+					<button id="signFormSubmit" type="submit" class="btn btn-primary yellowButton">Узнать</button>
+				</form>
+				<div class="resultMessage" id="signFromResult"></div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade modalForm" id="modalFormGreetings">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<button class="close-button close" type="button" data-dismiss="modal" aria-hidden="true">
+					<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M2 2L20 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+						<path d="M20 2L2 20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+					</svg>			
+				</button>
+				<p>
+					Спасибо
+				</p>
+				<p>
+					Заявка принята
+				</p>
+			</div>
+		</div>
+	</div>
+	<div id="mobileMenu">
+		<ul id="navigation">
+			<li>
+				<a class="navigatiinLink" href="//clubhouse.dp.ua/#aboutComplex">О комплексе</a>
+			</li>
+			<li>
+				<a class="navigatiinLink" href="//clubhouse.dp.ua/#plans">Планировки</a>
+			</li>
+			<li>
+				<a class="navigatiinLink" href="//clubhouse.dp.ua/#infrastructure">Инфраструктура</a>
+			</li>
+			<li>
+				<a class="navigatiinLink" href="//clubhouse.dp.ua/#gallery">Галерея</a>
+			</li>
+			<li>
+				<a class="navigatiinLink" href="//clubhouse.dp.ua/#contacts">Контакты</a>
+			</li>
+			<li>
+				<a class="navigatiinLink" href="https://novostroy111.wixsite.com/clubhouse" target="_blank">ОСББ</a>
+			</li>
+			<li>
+				<div class="socialNetworks">
+					<a href="//www.facebook.com/clubhouse.dp/" target="_blank">
+						<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M16.0443 0H1.44426C1.04426 0 0.744263 0.3 0.744263 0.7V15.4C0.744263 15.7 1.04426 16 1.44426 16H8.74426V11H6.74426V8H8.74426V6C8.74426 3.9 9.94426 3 11.7443 3C12.6443 3 13.5443 3 13.7443 3V6H12.7443C12.1443 6 11.7443 6.4 11.7443 7V8H14.3443L13.7443 11H11.7443V16H16.0443C16.4443 16 16.7443 15.7 16.7443 15.3V0.7C16.7443 0.3 16.4443 0 16.0443 0Z" fill="white"/>
+						</svg>
+					</a>
+					<a href="//www.instagram.com/clubhouse.dp/" target="_blank">
+						<svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M12.8893 4.85213C13.4195 4.85213 13.8493 4.42232 13.8493 3.89213C13.8493 3.36194 13.4195 2.93213 12.8893 2.93213C12.3591 2.93213 11.9293 3.36194 11.9293 3.89213C11.9293 4.42232 12.3591 4.85213 12.8893 4.85213Z" fill="white"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.74426 8C4.74426 10.206 6.53826 12 8.74426 12C10.9503 12 12.7443 10.206 12.7443 8C12.7443 5.794 10.9503 4 8.74426 4C6.53826 4 4.74426 5.794 4.74426 8ZM6.74426 8C6.74426 6.897 7.64126 6 8.74426 6C9.84726 6 10.7443 6.897 10.7443 8C10.7443 9.103 9.84726 10 8.74426 10C7.64126 10 6.74426 9.103 6.74426 8Z" fill="white"/>
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.74426 16H12.7443C14.8003 16 16.7443 14.056 16.7443 12V4C16.7443 1.944 14.8003 0 12.7443 0H4.74426C2.68826 0 0.744263 1.944 0.744263 4V12C0.744263 14.056 2.68826 16 4.74426 16ZM2.74426 4C2.74426 3.065 3.80926 2 4.74426 2H12.7443C13.6793 2 14.7443 3.065 14.7443 4V12C14.7443 12.935 13.6793 14 12.7443 14H4.74426C3.79126 14 2.74426 12.953 2.74426 12V4Z" fill="white"/>
+						</svg>
+					</a>
+				</div>
+			</li>
+		</ul>
+		<div class="logo">
+			<img src="build/images/common/logo.png" alt="logo">
+		</div>
+		<div class="close-button-menu">
+			<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M1 1L19 19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+				<path d="M19 1L1 19" stroke="white" stroke-width="2" stroke-linecap="round"/>
+			</svg>
+		</div>
+		<img class="dotted" src="build/images/common/points.png" alt="dots">
+		<img class="dotted" src="build/images/common/points.png" alt="dots">
+		<img class="dotted" src="build/images/common/points.png" alt="dots">
+	</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="build/js/scripts.min.js?v=0.002"></script>
+<script src="build/js/formValidation.min.js?v=0.003"></script>
+<script src="build/js/modernizr-custom.js?v=0.001"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+@import "common/media-queries.scss";
+@import "common/variables.scss";
+@import "common/main.scss";
+@import "common/modal.scss";
+@import "common/header.scss";
+@import "common/footer.scss";
+@import "common/backgrounds.scss";
+
+
+@import "aboutComplex/aboutComplex.scss";
+@import "advantages/advantages.scss";
+@import "contacts/contacts.scss";
+@import "docs/docs.scss";
+@import "gallery/gallery.scss";
+@import "greetings/greetings.scss";
+@import "infrastructure/infrastructure.scss";
+@import "intro/intro.scss";
+@import "plans/plans.scss";
+@import "progress/progress.scss";
+@import "singlePlan/singlePlan.scss";
+@import "ready/ready.scss";

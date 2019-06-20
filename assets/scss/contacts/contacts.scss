@@ -1,0 +1,128 @@
+#contacts {
+    padding: 70px 0 149px;
+    margin-top: -75px;
+    margin-bottom: 10px;
+    background : {
+        size: auto 862px;
+        repeat: no-repeat;
+        position: top right;
+        // image: url('../images/contacts/contactsBackground.webp');
+    }
+    @include respond-up-to(sm) {
+        margin-top:  0;
+        padding: 25px 0 60px;
+        // background-image: url('../images/contacts/contactsBackgrounMobile.webp');
+    }
+    @include respond-exact(md) {
+        margin-top: 0;
+        padding: 102px 0 50px;
+        // background-image: url('../images/contacts/contactsBackgrounIpad.webp');
+        margin-top: -88px;
+    }
+    @include respond-up-to(md) {
+        background : {
+            position: top left;
+            size: 100% auto;
+        }
+        margin-bottom: 50px;
+    }
+    h2 {
+        color: $white;
+        margin-bottom: 250px;
+        @include respond-up-to(md) {
+            margin-bottom: 45px;
+        }
+    }
+    .dotted {
+        left: -21px;
+        top: 181px;
+        @include respond-exact(md) {
+            top: 138px;
+            left: 55px;
+        }
+    }
+    .contactsInformationWrapper {
+        width: 1112px;
+        margin-left: 63px;
+        display: flex;
+        flex-flow: row wrap;
+        @include respond-up-to(md) {
+            width: 100%;
+            margin-left: 0;
+            flex-direction: column;
+        }
+        &Single {
+            width: 540px;
+            padding: 50px;
+            box-shadow: 16px 16px 35px rgba(50, 50, 71, 0.35);
+            @include respond-up-to(sm) {
+                width: 100%;
+            }
+            @include respond-exact(md) {
+                margin: 0 auto;
+            }
+            p {
+                font-size: 44px;
+                font-weight: bold;
+                @include respond-up-to(sm) {
+                    font-size: 35px;
+                }
+            }
+            &:first-of-type {
+                margin-right: 32px;
+                @include respond-up-to(sm) {
+                    margin-right: 0;
+                    margin-bottom: 35px;
+                    padding: 53px 15px 65px 22px;
+                }
+                @include respond-exact(md) {
+                    margin-right: auto;
+                    margin-bottom: 40px;
+                }
+                background: $white;
+                p {
+                    color: $black3;
+                    margin-bottom: 40px;
+                }
+                ul {
+                    list-style: none;
+                    li {
+                        color: $grey9c;
+                        margin-bottom: 10px;
+                        span {
+                            color: $black3;
+                            font-size: inherit;
+                        }
+                        a{
+                            color: inherit;
+                        }
+                        &:last-of-type {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+            &:last-of-type {
+                background: $black21;
+                @include respond-up-to(sm) {
+                    padding: 50px 27px 73px;
+                }
+                p {
+                    &:first-child {
+                        color: $white;
+                        @include respond-up-to(sm) {
+                            font-size: 30px;
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        color: $greybd;
+                        font-size: 16px;
+                        font-weight: normal;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

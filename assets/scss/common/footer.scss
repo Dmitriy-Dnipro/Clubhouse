@@ -1,0 +1,63 @@
+footer {
+    background-color: #F6F7F9;
+    padding: 15px 0;
+    @include respond-up-to(sm) {
+        padding: 10px 0;
+    }
+    p {
+        color: #414141;
+        font-size: 14px;
+    }
+    .socialNetworks { 
+        flex-direction: row;
+        justify-content: space-evenly;
+        @include respond-up-to(sm) {
+            justify-content: flex-end;
+            a {
+                &:last-of-type {
+                    margin-left: 17px;
+                }
+            }
+        } 
+    }
+    .flex-element {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-end;
+        .copyright {
+            color: #414141;
+            letter-spacing: 0.05em;
+            font-size: 14px;
+            text-align: right;
+            @media only screen and (max-width: 320px) {
+                font-size: 9px !important;
+            }
+            @include respond-up-to(md) {
+                font-size: 12px;
+            }
+        }
+        a { 
+            //position: absolute;
+
+            display: block;
+            width: 42px;
+            height: 40px;
+
+            background : {
+                repeat: no-repeat;
+                image: url('../images/common/sprite.png');
+                position: -5px -5px;
+            }
+
+            &:hover {
+                background-position: -5px -55px;
+            }
+
+        }
+    }
+    .align {
+        margin-bottom: auto;
+        margin-top: auto;
+    }
+}

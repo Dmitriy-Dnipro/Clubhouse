@@ -1,0 +1,411 @@
+.modal {
+    .modal-dialog {
+        .modal-content {
+            position: relative;
+            border-radius: 0;
+            .close {
+                position: absolute;
+
+                top: 30px;
+                right: 30px;
+
+                width: 18px;
+                height: 18px;
+
+                opacity: 1;
+                font-size: 1rem;
+
+                z-index: 355;
+
+                svg {
+                    width: inherit;
+                    height: inherit;
+                }
+            }
+        }
+    }
+}
+
+#modalAboutComplex {
+    .modal-dialog {
+        max-width: 950px;
+        @include respond-exact(md) {
+            max-width: 750px;
+        }
+        .modal-content {
+            padding: 60px 90px 45px;
+            position: relative;
+            @include respond-up-to(sm) {
+                padding: 65px 25px 25px;
+            }
+            @include respond-exact(md) {
+                padding: 60px 38px 25px;
+            }
+            background : {
+                repeat: no-repeat;
+                size: contain;
+                position: top left;
+                image: url('../images/common/modalCommon.webp')
+            }
+            overflow: hidden;
+            p{
+                color: $black3;
+                &:first-of-type {
+                    text-align: center;
+                    font-weight: bold;
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+                &:not(:first-of-type) {
+                    text-align: justify;
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                    @include respond-up-to(sm) {
+                        font-size: 14px;
+                        //margin-bottom: 20px;
+                    }
+                }
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            .dotted {
+                z-index: 2;
+                &:first-of-type {
+                    left: 184px;
+                    top: -57px;
+                }
+                &:nth-of-type(2) {
+                    top: 431px;
+                    left: -86px
+                }
+                &:nth-of-type(3) {
+                    bottom: 241px;
+                    right: -75px;
+                    @include respond-up-to(sm) {
+                        right: -92px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#modalAdvantages {
+    .modal-dialog {
+        max-width: 950px;
+        @include respond-exact(md) {
+            max-width: 738px;
+        }
+        .modal-content {
+            background : {
+                repeat: no-repeat;
+                size: cover;
+                position: top left;
+                image: url('../images/common/modalBackground.jpg');
+            }
+            padding: 60px 155px;
+            overflow: hidden;
+            @include respond-up-to(sm) {
+                padding: 66px 24px;
+            }
+            @include respond-exact(md) {
+                padding: 60px 24px;
+            }
+            p{
+                color: $white;
+                text-align: center;
+                font-weight: bold;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+            ul {
+                list-style: none;
+                li {
+                    color: $white;
+                    position: relative;
+                    margin-bottom: 15px;
+                    padding-left: 31px;
+                    &:before {
+                        position: absolute;
+                        content: '';
+                        display: block;
+                        left: 0;
+                        top: 10px;
+                        width: 9px;
+                        height: 9px;
+                        background: linear-gradient(187.27deg,#faff00 10.74%,#ff9a00 85.72%);
+                        @include respond-up-to(sm) {
+                            top: 4.5px;
+                        }
+                    }
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .dotted {
+                @include respond-up-to(md) {
+                    display: none;
+                }
+                &:first-of-type {
+                    top: 271px;
+                    left: -90px;
+                }
+                &:last-of-type {
+                    bottom: 36px;
+                    right: 17px;
+                }
+            }
+        }
+    }
+}
+
+.modalForm {
+    .modal-dialog {
+        max-width: 721px;
+        .modal-content {
+            background-color: $black21;
+            text-align: center;
+            p {
+                &:first-of-type {
+                    font-size: 44px;
+                    color: $white;
+                    font-weight: bold;
+                    @include respond-up-to(sm) {
+                        font-size: 30px;
+                    }
+                }
+                &:nth-of-type(2) {
+                    color: $greybd;
+                    font-size: 20px;
+                    @include respond-up-to(sm) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            form {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+#modalFormSign {
+    .modal-dialog {
+        .modal-content {
+            padding: 75px 140px;
+            @include respond-up-to(sm) {
+                padding: 70px 30px;
+            }
+            p {
+                &:last-of-type {
+                    margin-bottom: 25px;
+                }
+            }
+            button {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+#modalFormSignPlan {
+    .modal-dialog {
+        .modal-content {
+            padding: 50px 145px;
+            @include respond-up-to(sm) {
+                padding: 70px 30px;
+            }
+            @include respond-exact(md) {
+                padding: 70px 130px;
+            }
+            p {
+                &:last-of-type {
+                    margin-bottom: 25px;
+                }
+            }
+            button {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+#modalFormGreetings {
+    .modal-dialog {
+        .modal-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 143px 0;
+        }
+    }
+}
+
+#modalFormGetPDF {
+    .modal-dialog {
+        .modal-content {
+            padding: 50px 140px;
+            p {
+                &:last-of-type {
+                    margin-bottom: 25px;
+                }
+            }
+            @include respond-up-to(sm) {
+                padding: 50px 30px;
+            }
+            .download {
+                @include respond-up-to(sm) {
+                    left: 40px;
+                    top: 45%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
+
+.modalDoc {
+    .modal-dialog {
+        max-width: 550px;
+        @include respond-up-to(sm) {
+            max-width: 346px;
+        }
+        .modal-content {
+            background: $white;
+            padding: 60px 107px;
+            @include respond-up-to(sm) {
+                padding: 66px 50px;
+            }
+            p{
+                color: $black3;
+                text-align: center;
+                font-weight: bold;
+                font-size: 32px;
+                margin-bottom: 20px;
+            }
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+
+#mobileMenu {
+    @include respond-to(md) {
+        display: none;
+    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 3000;
+    transition: visibility 1.5s,opacity 1.5s;
+    overflow: hidden;
+    background : {
+        size: cover;
+        repeat: no-repeat;
+        position: center left;
+    }
+    @include respond-up-to(sm) {
+        padding: 157.5px 60px 99px;
+    }
+    @include respond-exact(md) {
+        padding: 299px 0 250px;
+    }
+    ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        li{
+            text-align: center;
+            @include respond-up-to(sm) {
+                margin-bottom: 30px;
+            }
+            @include respond-exact(md) {
+                margin-bottom: 42px;
+            }
+            a {
+                color: $white;
+                @include respond-up-to(sm) {
+                    font-size: 24px;
+                }
+                @include respond-exact(md) {
+                    font-size: 35px;
+                }
+            }
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+            .socialNetworks {
+                justify-content: center;
+            }
+        }
+    }
+    .close-button-menu {
+        position: absolute;
+        top: 22px;
+        right: 19px;
+        @include respond-exact(md) {
+            top: 27px;
+            right: 38px;
+        }
+    }
+    .logo {
+        position: absolute;
+        top: 21px;
+        left: 15px;
+        @include respond-exact(md) {
+            top: 26px;
+            left: 38px;
+        }
+        img {
+            @include respond-up-to(sm) {
+                max-width: 96px;
+            }
+        }
+    }
+    .dotted {
+        &:first-of-type {
+            top: 198.5px;
+            right: -94px;
+            @include respond-exact(md) {
+                top: 193px;
+                right: -51px;
+            }
+        }
+        &:nth-of-type(2) {
+            bottom: 0;
+            left: -36px;
+            @include respond-exact(md) {
+                bottom: 15px;
+                left: 90px;
+            }
+        }
+        &:nth-of-type(3) {
+            top: 350px;
+            left: -90px;
+            @include respond-up-to(sm) {
+                display: none;
+            }
+        }
+    }
+}
+    
+.make-visible{
+    opacity: 1 !important;
+    visibility: visible !important;
+    transition: opacity 1.5s,visibility 1.5s;
+    width: 100%;
+}
+
+.disableBodyScroll{
+    height: 100%;
+    overflow: hidden;
+}
